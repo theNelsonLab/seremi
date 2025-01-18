@@ -1,6 +1,8 @@
 seremi documentation
 ====================
 
+``pip install seremi``
+
 Read SER & EMI microscope images and metadata.
 These image files come from FEI TIA (Tecnai Imaging and Analysis) microscope software, originally created by Emispec.
 
