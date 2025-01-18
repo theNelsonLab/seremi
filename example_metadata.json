@@ -1,0 +1,162 @@
+{
+  "ObjectInfo": {
+    "Uuid": "66725b18-2669-4e3b-addd-8da57859902e",
+    "ExperimentalConditions": {
+      "MicroscopeConditions": {
+        "AcceleratingVoltage": "200000",
+        "Tilt1": "1.22165",
+        "Tilt2": "0.000000"
+      }
+    },
+    "ExperimentalDescription": {
+      "Root": {
+        "Data": [
+          {
+            "Label": "Microscope",
+            "Value": "Microscope TalosArcticaG2 200 kV D9955630 CryoTwin",
+            "Unit": null
+          },
+          {
+            "Label": "User",
+            "Value": "SUPERVISOR",
+            "Unit": null
+          },
+          {
+            "Label": "Gun type",
+            "Value": "FEG",
+            "Unit": null
+          },
+          {
+            "Label": "High tension",
+            "Value": "200",
+            "Unit": "kV"
+          },
+          {
+            "Label": "Extraction voltage",
+            "Value": "3700",
+            "Unit": "V"
+          },
+          {
+            "Label": "Gun lens",
+            "Value": "8",
+            "Unit": null
+          },
+          {
+            "Label": "Emission",
+            "Value": "304.1",
+            "Unit": "uA"
+          },
+          {
+            "Label": "Mode",
+            "Value": "TEM uP SA Zoom Diffraction",
+            "Unit": null
+          },
+          {
+            "Label": "Defocus",
+            "Value": "0.000",
+            "Unit": null
+          },
+          {
+            "Label": "Camera length",
+            "Value": "0.960",
+            "Unit": "m"
+          },
+          {
+            "Label": "Spot size",
+            "Value": "11",
+            "Unit": null
+          },
+          {
+            "Label": "Intensity",
+            "Value": "44.905",
+            "Unit": "%"
+          },
+          {
+            "Label": "Objective lens",
+            "Value": "84.791",
+            "Unit": "%"
+          },
+          {
+            "Label": "Diffraction lens",
+            "Value": "36.180",
+            "Unit": "%"
+          },
+          {
+            "Label": "Image shift X",
+            "Value": "0.000",
+            "Unit": "um"
+          },
+          {
+            "Label": "Image shift Y",
+            "Value": "0.000",
+            "Unit": "um"
+          },
+          {
+            "Label": "Stage X",
+            "Value": "-799.516",
+            "Unit": "um"
+          },
+          {
+            "Label": "Stage Y",
+            "Value": "362.125",
+            "Unit": "um"
+          },
+          {
+            "Label": "Stage Z",
+            "Value": "45.391",
+            "Unit": "um"
+          },
+          {
+            "Label": "Stage A",
+            "Value": "70.00",
+            "Unit": "deg"
+          },
+          {
+            "Label": "Stage B",
+            "Value": "0.00",
+            "Unit": "deg"
+          },
+          {
+            "Label": "C2 Aperture",
+            "Value": "150",
+            "Unit": "um"
+          },
+          {
+            "Label": "SA Aperture",
+            "Value": "100",
+            "Unit": "um"
+          },
+          {
+            "Label": "Filter mode",
+            "Value": null,
+            "Unit": null
+          }
+        ]
+      }
+    },
+    "TrueImageHeaderInfo": "<Root><Data><Index>5</Index><Value>1</Value></Data><Data><Index>6</Index><Value>1</Value></Data><Data><Index>7</Index><Value>4</Value></Data><Data><Index>8</Index><Value>9955630</Value></Data><Data><Index>9</Index><Value>200</Value></Data><Data><Index>10</Index><Value>0</Value></Data><Data><Index>11</Index><Value>0</Value></Data><Data><Index>12</Index><Value>0</Value></Data><Data><Index>13</Index><Value>0</Value></Data><Data><Index>14</Index><Value>0</Value></Data><Data><Index>15</Index><Value>1.62630325872826E-13</Value></Data><Data><Index>17</Index><Value>0</Value></Data><Data><Index>18</Index><Value>0</Value></Data><Data><Index>19</Index><Value>0</Value></Data><Data><Index>22</Index><Value>0</Value></Data><Data><Index>23</Index><Value>0</Value></Data><Data><Index>24</Index><Value>0</Value></Data><Data><Index>25</Index><Value>0</Value></Data><Data><Index>26</Index><Value>0</Value></Data><Data><Index>27</Index><Value>0</Value></Data><Data><Index>30</Index><Value>0</Value></Data><Data><Index>31</Index><Value>0.96</Value></Data><Data><Index>32</Index><Value>0</Value></Data><Data><Index>33</Index><Value>1</Value></Data><Data><Index>34</Index><Value>0</Value></Data><Data><Index>35</Index><Value>11</Value></Data><Data><Index>36</Index><Value>6</Value></Data><Data><Index>37</Index><Value>0</Value></Data><Data><Index>39</Index><Value>0</Value></Data><Data><Index>40</Index><Value>0</Value></Data><Data><Index>41</Index><Value>0</Value></Data><Data><Index>42</Index><Value>0</Value></Data><Data><Index>43</Index><Value>0</Value></Data><Data><Index>44</Index><Value>0</Value></Data><Data><Index>45</Index><Value>-0.00079951591</Value></Data><Data><Index>46</Index><Value>0.000362125354</Value></Data><Data><Index>47</Index><Value>0.00004539129</Value></Data><Data><Index>48</Index><Value>1.22164569929385</Value></Data><Data><Index>49</Index><Value>0</Value></Data><Data><Index>54</Index><Value>0</Value></Data><Data><Index>55</Index><Value>0</Value></Data><Data><Index>56</Index><Value>0</Value></Data><Data><Index>57</Index><Value>0</Value></Data><Data><Index>58</Index><Value>0</Value></Data><Data><Index>59</Index><Value>0</Value></Data><Data><Index>60</Index><Value>0</Value></Data><Data><Index>61</Index><Value>0</Value></Data></Root>",
+    "AcquireDate": "Mon Aug 28 17:16:24 2023",
+    "AcquireInfo": {
+      "Magnification": "0 X",
+      "DwellTimePath": "3.00000",
+      "CameraNamePath": "BM-Ceta",
+      "Binning": "2",
+      "MaxPossiblePixelValue": "36188",
+      "SaturationPoint": "23648",
+      "AppliedImageCorrections": "3",
+      "PixelValueToCameraCounts": "1",
+      "NoIntensityMultiplication": "0",
+      "CountsToElectrons": "0.000000",
+      "ElectronCounted": "0"
+    },
+    "Manufacturer": "FEI",
+    "DetectorPixelHeight": "4096",
+    "DetectorPixelWidth": "4096",
+    "DetectorRange": {
+      "StartX": "0.000000",
+      "EndX": "4096.00",
+      "StartY": "0.000000",
+      "EndY": "4096.00"
+    }
+  }
+}

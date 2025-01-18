@@ -1,0 +1,14 @@
+seremi documentation
+====================
+
+Read SER microscope images and EMI metadata files.
+These image files come from FEI TIA (Tecnai Imaging and Analysis) microscope software, originally created by Emispec.
+
+.. literalinclude :: ../../example.py
+   :language: python
+
+.. toctree::
+   :maxdepth: 4
+
+   seremi
+   example_info_dict

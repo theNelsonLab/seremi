@@ -11,12 +11,17 @@ class SERFile:
     Read a SER microscope image file, which contains multiple frames. Initially, on opening an SER file, only metadata is read.
     To access image content of a particular frame, call read_frame().
 
-    Attributes:
-        path: user-provided path of the image file
-        num_frames: number of images inside this one SER file
+    SER files contain very little metadata. Instead, for a SER file "abc_1.ser", there exists a corresponding EMI file "abc.emi",
+    which contains detailed metadata corresponding to the SER.
     """
 
+    #: user-provided path of the image file
     path: Path
+    #: height of each image in pixels
+    img_height: int
+    #: width of each image in pixels
+    img_width: int
+    #: number of images inside this one SER file
     num_frames: int
 
     _file: BinaryIO
@@ -27,7 +32,7 @@ class SERFile:
 
     def open(self):
         """
-        Open the SER file and read its metadata.
+        Open the SER file and populate metadata fields.
         This method does not read frame contents.
         """
         if sys.byteorder != 'little':
@@ -62,6 +67,10 @@ class SERFile:
         self._tag_offset_array = np.frombuffer(
             self._buf[offset_array_offset + offset_array_len:offset_array_offset + offset_array_len * 2],
             dtype=varint_dtype)
+
+        # read height and width of the first image
+        header_offset = self._offset_array[0]
+        self.img_width, self.img_height = struct.unpack('<II', self._buf[header_offset + 42:header_offset + 50])
 
     def __enter__(self):
         self.open()

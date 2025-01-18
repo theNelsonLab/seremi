@@ -1,0 +1,7 @@
+seremi
+======
+
+.. toctree::
+   :maxdepth: 4
+
+   seremi

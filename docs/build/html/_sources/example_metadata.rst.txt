@@ -1,0 +1,5 @@
+Example metadata
+====================
+
+.. literalinclude :: ../../example_metadata.json
+   :language: json
