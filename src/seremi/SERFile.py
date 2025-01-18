@@ -15,8 +15,6 @@ class SERFile:
     which contains detailed metadata corresponding to the SER.
     """
 
-    #: user-provided path of the image file
-    path: Path
     #: height of each image in pixels
     img_height: int
     #: width of each image in pixels
@@ -24,11 +22,15 @@ class SERFile:
     #: number of images inside this one SER file
     num_frames: int
 
+    _path: Path
     _file: BinaryIO
     _buf: mmap.mmap
 
     _offset_array: np.ndarray
     _tag_offset_array: np.ndarray
+
+    def __init__(self, path: Path | str):
+        self._path = Path(path)
 
     def open(self):
         """
@@ -38,7 +40,7 @@ class SERFile:
         if sys.byteorder != 'little':
             raise OSError('SER reader expects little endian host')
 
-        self._file = open(self.path, 'rb')
+        self._file = open(self._path, 'rb')
         self._buf = mmap.mmap(self._file.fileno(), 0, access=mmap.ACCESS_READ)
 
         # https://www3.ntu.edu.sg/home/cbb/info/TIAformat/index.html
@@ -85,9 +87,6 @@ class SERFile:
 
     def __exit__(self, *_args):
         self.close()
-
-    def __init__(self, path: Path | str):
-        self.path = Path(path)
 
     def read_frame(self, idx: int) -> np.ndarray:
         """

@@ -12,26 +12,25 @@ class EMIFile:
     Read an EMI file, which contains detailed metadata and the last frame of an SER.
     """
 
-    #: user-provided path
-    path: Path
     #: height of the image in pixels
     img_height: int
     #: width of the image in pixels
     img_width: int
-    #: domain metadata field
+    #: domain metadata field, such as "Reciprocal Space"
     domain: str
     #: the filepath of the SER when it was saved the first time
     original_filepath: str
     #: metadata XML object converted to dictionary
     info_dict: dict
 
+    _path: Path
     _file: BinaryIO
     _buf: mmap.mmap
     _img_data_start: int
     _img_data_end: int
 
     def __init__(self, path: str | Path):
-        self.path = path
+        self._path = path
 
     def open(self):
         """
@@ -41,7 +40,7 @@ class EMIFile:
         if sys.byteorder != 'little':
             raise OSError('EMI reader expects little endian host')
 
-        self._file = open(self.path, 'rb')
+        self._file = open(self._path, 'rb')
         self._buf = mmap.mmap(self._file.fileno(), 0, access=mmap.ACCESS_READ)
 
         # based on https://github.com/zhijie-li/TIA_dump

@@ -49,7 +49,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="seremi.EMIFile.domain">
 <span class="sig-name descname"><span class="pre">domain</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#seremi.EMIFile.domain" title="Link to this definition">¶</a></dt>
-<dd><p>domain metadata field</p>
+<dd><p>domain metadata field, such as “Reciprocal Space”</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -81,12 +81,6 @@ This method does not read frame contents.</p>
 <dt class="sig sig-object py" id="seremi.EMIFile.original_filepath">
 <span class="sig-name descname"><span class="pre">original_filepath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#seremi.EMIFile.original_filepath" title="Link to this definition">¶</a></dt>
 <dd><p>the filepath of the SER when it was saved the first time</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="seremi.EMIFile.path">
-<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#seremi.EMIFile.path" title="Link to this definition">¶</a></dt>
-<dd><p>user-provided path</p>
 </dd></dl>
 
 <dl class="py method">
@@ -136,12 +130,6 @@ which contains detailed metadata corresponding to the SER.</p>
 <span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#seremi.SERFile.open" title="Link to this definition">¶</a></dt>
 <dd><p>Open the SER file and populate metadata fields.
 This method does not read frame contents.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="seremi.SERFile.path">
-<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#seremi.SERFile.path" title="Link to this definition">¶</a></dt>
-<dd><p>user-provided path of the image file</p>
 </dd></dl>
 
 <dl class="py method">
@@ -213,7 +201,6 @@ This method does not read frame contents.</p>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.EMIFile.info_dict"><code class="docutils literal notranslate"><span class="pre">EMIFile.info_dict</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.EMIFile.open"><code class="docutils literal notranslate"><span class="pre">EMIFile.open()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.EMIFile.original_filepath"><code class="docutils literal notranslate"><span class="pre">EMIFile.original_filepath</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#seremi.EMIFile.path"><code class="docutils literal notranslate"><span class="pre">EMIFile.path</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.EMIFile.read_frame"><code class="docutils literal notranslate"><span class="pre">EMIFile.read_frame()</span></code></a></li>
 </ul>
 </li>
@@ -223,7 +210,6 @@ This method does not read frame contents.</p>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.SERFile.img_width"><code class="docutils literal notranslate"><span class="pre">SERFile.img_width</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.SERFile.num_frames"><code class="docutils literal notranslate"><span class="pre">SERFile.num_frames</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.SERFile.open"><code class="docutils literal notranslate"><span class="pre">SERFile.open()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#seremi.SERFile.path"><code class="docutils literal notranslate"><span class="pre">SERFile.path</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.SERFile.read_all_frames"><code class="docutils literal notranslate"><span class="pre">SERFile.read_all_frames()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.SERFile.read_frame"><code class="docutils literal notranslate"><span class="pre">SERFile.read_frame()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#seremi.SERFile.read_last_frame"><code class="docutils literal notranslate"><span class="pre">SERFile.read_last_frame()</span></code></a></li>
