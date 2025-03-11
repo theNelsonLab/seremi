@@ -16,6 +16,8 @@ class EMIFile:
     img_height: int
     #: width of the image in pixels
     img_width: int
+    #: number of frames in the SER
+    num_frames: int
     #: domain metadata field, such as "Reciprocal Space"
     domain: str
     #: the filepath of the SER when it was saved the first time
@@ -72,6 +74,15 @@ class EMIFile:
         self.img_width, self.img_height = int(img_header_nums[1]), int(img_header_nums[2])
 
         assert img_len_bytes == self.img_width * self.img_height * 4, 'calculated wrong image size based on dimensions'
+
+        # extract number of frames from the header
+        # \x31\x00<two byte identifier><4 byte U32 LE> seems to be common pattern in header
+        NUM_FRAMES_KEY = b'\x31\x00\x06\x01'
+        num_frames_keyloc = self._buf.find(NUM_FRAMES_KEY)
+        if num_frames_keyloc == -1 or num_frames_keyloc > 3000:
+            raise ValueError(f'failed to find num_frames in header, num_frames_keyloc={num_frames_keyloc}')
+        num_frames_start = num_frames_keyloc + len(NUM_FRAMES_KEY)
+        self.num_frames = np.frombuffer(self._buf[num_frames_start:num_frames_start + 4], dtype=np.uint32)[0]
 
         self._img_data_end = self._img_data_start + img_len_bytes
 
